@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Get into Phone - Download the latest modded games and apps.">
+    <meta name="keywords" content="BeamNG.drive, modded games, mobile games, modlify.fun, download games">
+    <meta property="og:title" content="BeamNG.drive - Modlify.fun">
+    <meta property="og:description" content="Download the latest modded version of BeamNG.drive for mobile. Experience realistic driving and high-impact crashes.">
+    <meta property="og:image" content="https://i.ibb.co/d0LygVNc/IMG-20250221-213902.jpg">
+    <meta property="og:url" content="https://www.modlify.fun/beamng-drive">
+    <meta name="twitter:card" content="summary_large_image">
     <title>BeamNG.drive - Modlify.fun</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/gbsY945Q/Black-and-Green-Illustrative-E-Sports-Gaming-Logo-2-removebg.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
@@ -92,6 +99,13 @@
             list-style: none;
             display: flex;
             gap: 15px;
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .nav-links.active {
+            max-height: 500px; /* Adjust based on content */
         }
 
         .nav-links li a {
@@ -220,6 +234,39 @@
             background-color: yellow;
         }
 
+        .loader {
+            border: 4px solid var(--light);
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+            display: none; /* Hidden by default */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--dark);
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary);
+        }
+
         @media (max-width: 768px) {
             .menu-icon {
                 display: block; /* Show menu icon on mobile */
@@ -309,10 +356,10 @@
 
     <!-- BeamNG.drive Section -->
     <div class="cr">
-        <div class="cover"><img src="https://i.ibb.co/d0LygVNc/IMG-20250221-213902.jpg"></div>
+        <div class="cover"><img src="https://i.ibb.co/d0LygVNc/IMG-20250221-213902.jpg" alt="BeamNG.drive Cover"></div>
         <div class="container-md">
             <div class="logo">
-                <img src="https://i.ibb.co/Xkbb1pVF/6404024-2025-02-15-T162149-256.png">
+                <img src="https://i.ibb.co/Xkbb1pVF/6404024-2025-02-15-T162149-256.png" alt="BeamNG.drive Logo">
                 <div class="info">
                     <h1>BeamNG.drive!</h1>
                     <small>For Mobiles</small>
@@ -334,7 +381,8 @@
             </div>
             <div>
                 <!-- Download Button -->
-                <button onclick="showContentLocker()" class="btn-down" id="aa741">Download</button>
+                <button onclick="showContentLocker()" class="btn-down" id="aa741" aria-label="Download BeamNG.drive">Download</button>
+                <div class="loader" id="loader"></div>
 
                 <!-- Related Games Section -->
                 <div class="related-games">
@@ -357,7 +405,7 @@
             <br>
         </div>
 
-        <img src="https://i.ibb.co/8npMRJK9/images-1.jpg" class="w-100">
+        <img src="https://i.ibb.co/8npMRJK9/images-1.jpg" class="w-100" alt="BeamNG.drive Screenshot">
     </div>
 
     <!-- Footer Section -->
@@ -404,10 +452,50 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to Top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- JavaScript -->
     <script>
+        // Toggle Mobile Menu
+        document.getElementById('menuIcon').addEventListener('click', function() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        });
+
+        // Show/Hide Back to Top Button
+        window.onscroll = function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        // Scroll to Top Function
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+
+        // Download Button with Loader
         function showContentLocker() {
-            window.location.href = "https://installchecker.com/cl/i/lkw61g"; // Replace with your affiliate link
+            const loader = document.getElementById('loader');
+            loader.style.display = 'block';
+
+            setTimeout(() => {
+                try {
+                    window.location.href = "https://installchecker.com/cl/i/lkw61g";
+                } catch (error) {
+                    console.error('Download failed:', error);
+                    alert('Download failed. Please try again later.');
+                } finally {
+                    loader.style.display = 'none';
+                }
+            }, 1000);
         }
     </script>
 </body>

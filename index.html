@@ -399,10 +399,10 @@
 
         <!-- Download Buttons with AdBlueMedia Script -->
         <div class="download-section">
-            <button onclick="_Pg()" class="download-btn">
+            <button onclick="showContentLocker()" class="download-btn">
                 <i class="fab fa-android"></i> Download for Android
             </button>
-            <button onclick="setTimeout(_Pg, 5000);" class="download-btn">
+            <button onclick="showContentLocker()" class="download-btn">
                 <i class="fab fa-apple"></i> Download for iOS
             </button>
         </div>
@@ -418,7 +418,9 @@
     </script>
     <script src="https://d29gqhzevia104.cloudfront.net/7c3ff43.js"></script>
     <script>
-        _Pg(); // Initial call (optional)
+        function showContentLocker() {
+            _Pg(); // Trigger AdBlueMedia content locker
+        }
     </script>
 
     <!-- JavaScript for Mobile Menu and Screenshots -->

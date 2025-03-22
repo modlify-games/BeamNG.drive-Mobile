@@ -399,10 +399,10 @@
 
         <!-- Download Buttons -->
         <div class="download-section">
-            <button onclick="showContentLocker()" class="download-btn">
+            <button onclick="showContentLocker('android')" class="download-btn">
                 <i class="fab fa-android"></i> Download for Android
             </button>
-            <button onclick="redirectToiOS()" class="download-btn">
+            <button onclick="showContentLocker('ios')" class="download-btn">
                 <i class="fab fa-apple"></i> Download for iOS
             </button>
         </div>
@@ -499,13 +499,14 @@
     </script>
     <script src="https://d29gqhzevia104.cloudfront.net/7c3ff43.js"></script>
     <script>
-        function showContentLocker() {
-            _Pg(); // Trigger AdBlueMedia content locker
-        }
-
-        // Redirect to iOS download link
-        function redirectToiOS() {
-            window.location.href = "https://installchecker.com/cl/i/o6gwn2";
+        function showContentLocker(platform) {
+            if (platform === 'android') {
+                // Trigger AdBlueMedia content locker for Android
+                _Pg();
+            } else if (platform === 'ios') {
+                // Trigger AdBlueMedia content locker for iOS
+                _Pg();
+            }
         }
     </script>
 

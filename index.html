@@ -360,6 +360,81 @@
                 justify-content: center;
             }
         }
+
+        /* Simple Cookie Consent Styles */
+        .cookie-consent {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 600px;
+            width: 90%;
+            background: rgba(30, 30, 30, 0.95);
+            color: var(--text);
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            border: 1px solid rgba(0, 255, 204, 0.3);
+            display: none;
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .cookie-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .cookie-text {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        .cookie-text a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .cookie-text a:hover {
+            text-decoration: underline;
+        }
+
+        .accept-btn {
+            padding: 8px 20px;
+            background: var(--primary);
+            color: var(--dark);
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .accept-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .accept-btn {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -491,13 +566,50 @@
         </div>
     </footer>
 
+    <!-- Simple Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <p class="cookie-text">
+                We use cookies to provide our free download service. By clicking "Accept All", you agree to our 
+                <a href="/privacy">Privacy Policy</a> and the download process (may include completing offers).
+            </p>
+            <button id="acceptAll" class="accept-btn">Accept All</button>
+        </div>
+    </div>
+
     <!-- AdBlueMedia Script -->
     <script type="text/javascript">
         var beYaO_hzP_szYQUc = {"it": 4424460, "key": "ec93e"};
     </script>
     <script src="https://d29gqhzevia104.cloudfront.net/7c3ff43.js"></script>
     <script>
+        // Simple Cookie Consent Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptAll = document.getElementById('acceptAll');
+            
+            // Only show if not already accepted
+            if (!localStorage.getItem('cookiesAccepted')) {
+                setTimeout(() => {
+                    cookieConsent.style.display = 'block';
+                }, 1000);
+            }
+            
+            // Accept all cookies
+            acceptAll.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieConsent.style.display = 'none';
+            });
+        });
+
         function showContentLocker(platform) {
+            // Check if accepted
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookieConsent').style.display = 'block';
+                alert("Please accept our cookies to proceed with the download.");
+                return;
+            }
+            
             // Proceed with the offer
             if (platform === 'android') {
                 _Pg();

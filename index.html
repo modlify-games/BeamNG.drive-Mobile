@@ -20,9 +20,7 @@
     <title>BeamNG.drive - Modlify.fun</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-        /* CSS Styles (unchanged) */
         * {
             margin: 0;
             padding: 0;
@@ -362,88 +360,6 @@
                 justify-content: center;
             }
         }
-
-        /* Cookie Consent Styles */
-        .cookie-consent {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--light);
-            color: var(--text);
-            padding: 15px 20px;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-            z-index: 9999;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            display: none; /* Hidden by default, shown via JS */
-        }
-        
-        .cookie-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-        }
-        
-        .cookie-content p {
-            flex: 1;
-            min-width: 250px;
-            margin: 0;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-        
-        .cookie-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .cookie-btn {
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-weight: 500;
-            cursor: pointer;
-            border: none;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-        }
-        
-        .cookie-btn.accept {
-            background: var(--primary);
-            color: var(--dark);
-        }
-        
-        .cookie-btn.accept:hover {
-            background: var(--secondary);
-        }
-        
-        .cookie-btn.decline {
-            background: transparent;
-            color: var(--text);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .cookie-btn.decline:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        @media (max-width: 600px) {
-            .cookie-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .cookie-buttons {
-                width: 100%;
-            }
-            
-            .cookie-btn {
-                flex: 1;
-            }
-        }
     </style>
 </head>
 <body>
@@ -575,57 +491,13 @@
         </div>
     </footer>
 
-    <!-- Cookie Consent Banner -->
-    <div id="cookieConsent" class="cookie-consent">
-        <div class="cookie-content">
-            <p>To download games from our website, you'll need to complete a quick offer. This helps us keep the service free. By continuing, you agree to our <a href="#" style="color: var(--primary);">Terms</a> and <a href="#" style="color: var(--primary);">Privacy Policy</a>.</p>
-            <div class="cookie-buttons">
-                <button id="acceptCookies" class="cookie-btn accept">I Understand</button>
-                <button id="declineCookies" class="cookie-btn decline">Learn More</button>
-            </div>
-        </div>
-    </div>
-
     <!-- AdBlueMedia Script -->
     <script type="text/javascript">
         var beYaO_hzP_szYQUc = {"it": 4424460, "key": "ec93e"};
     </script>
     <script src="https://d29gqhzevia104.cloudfront.net/7c3ff43.js"></script>
     <script>
-        // Cookie Consent Logic
-        document.addEventListener('DOMContentLoaded', function() {
-            const cookieConsent = document.getElementById('cookieConsent');
-            const acceptCookies = document.getElementById('acceptCookies');
-            const declineCookies = document.getElementById('declineCookies');
-            
-            // Check if cookie consent was already given (hide if true)
-            if (!localStorage.getItem('cookieConsentAccepted')) {
-                // Show the banner after page loads
-                setTimeout(function() {
-                    cookieConsent.style.display = 'block';
-                }, 500);
-            }
-            
-            // Accept cookies
-            acceptCookies.addEventListener('click', function() {
-                localStorage.setItem('cookieConsentAccepted', 'true');
-                cookieConsent.style.display = 'none';
-            });
-            
-            // Learn More button
-            declineCookies.addEventListener('click', function() {
-                alert("To access our free downloads, we require users to complete a simple offer. These offers help support our platform and keep it free for everyone. The offers may include:\n\n- Trying an app or game\n- Completing a short survey\n- Signing up for a service\n\nAll offers are safe and legitimate. Thank you for your support!");
-            });
-        });
-
         function showContentLocker(platform) {
-            // Check if cookies were accepted
-            if (!localStorage.getItem('cookieConsentAccepted')) {
-                alert("Please click 'I Understand' on the cookie banner first to proceed with the download.");
-                document.getElementById('cookieConsent').style.display = 'block';
-                return;
-            }
-            
             // Proceed with the offer
             if (platform === 'android') {
                 _Pg();

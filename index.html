@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Download BeamNG.drive Mobile - Experience realistic driving and high-impact crashes on your mobile device. Get it now on Android and iOS.">
-    <meta name="keywords" content="BeamNG.drive, modded games, mobile games, modlify.fun, download games">
-    <meta property="og:title" content="BeamNG.drive - Modlify.fun">
-    <meta property="og:description" content="Download the latest modded version of BeamNG.drive for mobile. Experience realistic driving and high-impact crashes.">
+    <meta name="description" content="Download BeamNG.drive Mobile - Experience realistic driving physics and crash simulation on your smartphone. Get it now on Android and iOS.">
+    <meta name="keywords" content="BeamNG.drive Mobile, modded games, mobile games, modlify.fun, download games">
+    <meta property="og:title" content="BeamNG.drive Mobile - Modlify.fun">
+    <meta property="og:description" content="Download the latest modded version of BeamNG.drive Mobile. Experience realistic soft-body physics and vehicle simulation.">
     <meta property="og:image" content="https://i.ibb.co/99bcw424/IMG-20250228-122052.jpg">
-    <meta property="og:url" content="https://www.modlify.fun/beamng-drive">
+    <meta property="og:url" content="https://www.modlify.fun/beamng-drive-mobile">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BeamNG.drive - Modlify.fun">
-    <meta name="twitter:description" content="Download the latest modded version of BeamNG.drive for mobile. Experience realistic driving and high-impact crashes.">
+    <meta name="twitter:title" content="BeamNG.drive Mobile - Modlify.fun">
+    <meta name="twitter:description" content="Download the latest modded version of BeamNG.drive Mobile. Experience realistic soft-body physics and vehicle simulation.">
     <meta name="twitter:image" content="https://i.ibb.co/99bcw424/IMG-20250228-122052.jpg">
     <meta name="author" content="Modlify.fun">
     <link rel="icon" href="https://i.ibb.co/gbsY945Q/Black-and-Green-Illustrative-E-Sports-Gaming-Logo-2-removebg.png">
-    <title>BeamNG.drive - Modlify.fun</title>
+    <title>BeamNG.drive Mobile - Modlify.fun</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         * {
             margin: 0;
@@ -133,20 +134,20 @@
         }
 
         .game-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 15px;
-            border: 2px solid var(--primary);
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            border: 3px solid var(--primary);
         }
 
         .game-details h1 {
-            font-size: 1.4rem;
-            margin-bottom: 8px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
         .game-details small {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.7);
         }
 
@@ -158,16 +159,15 @@
         .download-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px 24px;
+            gap: 10px;
+            padding: 12px 30px;
             background: var(--primary);
             color: var(--dark);
             text-decoration: none;
             border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: bold;
             transition: background 0.3s ease;
-            margin: 8px;
+            margin: 10px;
             cursor: pointer;
             border: none;
         }
@@ -185,16 +185,15 @@
 
         .spec-item {
             background: var(--light);
-            padding: 12px;
+            padding: 15px;
             border-radius: 10px;
             text-align: center;
         }
 
         .spec-item h3 {
             color: var(--primary);
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
 
         .spec-item p {
@@ -202,15 +201,69 @@
             font-size: 0.8rem;
         }
 
+        /* Installation Guide Styles */
+        .installation {
+            margin: 20px 0;
+        }
+
+        .installation h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .install-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .install-tab {
+            padding: 8px 16px;
+            background: var(--dark);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .install-tab.active {
+            background: var(--primary);
+            color: var(--dark);
+        }
+
+        .install-content {
+            background: var(--dark);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .install-steps {
+            list-style: none;
+        }
+
+        .install-steps li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .install-steps li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
         .features {
             margin: 20px 0;
         }
 
         .features h2 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
             color: var(--primary);
-            font-weight: 600;
         }
 
         .feature-list {
@@ -218,16 +271,15 @@
         }
 
         .feature-list li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
-            font-size: 0.9rem;
         }
 
         .feature-list li:before {
             content: "•";
             color: var(--primary);
-            font-size: 18px;
+            font-size: 20px;
             position: absolute;
             left: 0;
         }
@@ -239,29 +291,28 @@
         }
 
         .screenshots h2 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
             color: var(--primary);
-            font-weight: 600;
         }
 
         .screenshot-grid {
             display: flex;
-            gap: 12px;
+            gap: 15px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
-            padding-bottom: 12px;
+            padding-bottom: 15px;
         }
 
         .screenshot {
             width: 100%;
-            height: 140px;
-            border-radius: 8px;
+            height: 150px;
+            border-radius: 10px;
             object-fit: cover;
             scroll-snap-align: start;
             flex: 0 0 auto;
-            width: 240px;
+            width: 250px;
         }
 
         .footer {
@@ -281,9 +332,8 @@
 
         .footer-section h3 {
             font-size: 1rem;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: var(--primary);
-            font-weight: 600;
         }
 
         .footer-links {
@@ -291,13 +341,12 @@
         }
 
         .footer-links li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .footer-links a {
             color: var(--text);
             text-decoration: none;
-            font-size: 0.9rem;
             transition: color 0.3s ease;
         }
 
@@ -312,7 +361,7 @@
 
         .social-links a {
             color: var(--text);
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             transition: color 0.3s ease;
         }
 
@@ -322,10 +371,9 @@
 
         .footer-bottom {
             text-align: center;
-            margin-top: 12px;
-            padding-top: 12px;
+            margin-top: 15px;
+            padding-top: 15px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.85rem;
         }
 
         @media (max-width: 768px) {
@@ -338,10 +386,10 @@
                 flex-direction: column;
                 gap: 10px;
                 position: absolute;
-                top: 60px;
+                top: 70px;
                 right: 20px;
                 background: var(--light);
-                padding: 12px;
+                padding: 15px;
                 border-radius: 10px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
@@ -358,6 +406,85 @@
             .download-btn {
                 width: 100%;
                 justify-content: center;
+            }
+
+            .install-tabs {
+                flex-direction: column;
+            }
+        }
+
+        /* Cookie Consent Styles */
+        .cookie-consent {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 600px;
+            width: 90%;
+            background: rgba(30, 30, 30, 0.95);
+            color: var(--text);
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            border: 1px solid rgba(0, 255, 204, 0.3);
+            display: none;
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .cookie-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .cookie-text {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        .cookie-text a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .cookie-text a:hover {
+            text-decoration: underline;
+        }
+
+        .accept-btn {
+            padding: 8px 20px;
+            background: var(--primary);
+            color: var(--dark);
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .accept-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .accept-btn {
+                width: 100%;
             }
         }
     </style>
@@ -382,15 +509,15 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <img src="https://i.ibb.co/99bcw424/IMG-20250228-122052.jpg" alt="BeamNG.drive Cover">
+        <img src="https://i.ibb.co/99bcw424/IMG-20250228-122052.jpg" alt="BeamNG.drive Mobile Cover">
     </div>
 
     <!-- Game Info Section -->
     <div class="container">
         <div class="game-info">
-            <img src="https://i.ibb.co/Xkbb1pVF/6404024-2025-02-15-T162149-256.png" alt="BeamNG.drive Logo" class="game-icon">
+            <img src="https://i.ibb.co/Xkbb1pVF/6404024-2025-02-15-T162149-256.png" alt="BeamNG.drive Mobile Logo" class="game-icon">
             <div class="game-details">
-                <h1>BeamNG.drive</h1>
+                <h1>BeamNG.drive Mobile</h1>
                 <small>For Android and iOS</small>
             </div>
         </div>
@@ -409,7 +536,7 @@
         <div class="specs-grid">
             <div class="spec-item">
                 <h3>Size</h3>
-                <p>983.41 MB (Installer) 8GB (Post-Download Cache)</p>
+                <p>983.41MB (Installer) 8GB (Post-Download Cache)</p>
             </div>
             <div class="spec-item">
                 <h3>Price</h3>
@@ -425,14 +552,34 @@
             </div>
         </div>
 
+        <!-- Installation Guide -->
+        <div class="installation">
+            <h2>Installation Guide</h2>
+            <div class="install-tabs">
+                <div class="install-tab active">Android</div>
+                <div class="install-tab">iOS</div>
+            </div>
+            <div class="install-content">
+                <ul class="install-steps">
+                    <li>Download the APK file for Android or IPA file for iOS</li>
+                    <li>Enable "Install from Unknown Sources" in your device settings (Android only)</li>
+                    <li>Open the downloaded file</li>
+                    <li>Follow the installation prompts</li>
+                    <li>Once installed, launch the game</li>
+                    <li>Wait for additional resources to download</li>
+                    <li>Enjoy your game!</li>
+                </ul>
+            </div>
+        </div>
+
         <!-- Features Section -->
         <div class="features">
             <h2>Features</h2>
             <ul class="feature-list">
-                <li>High-End Graphics: Leveraging the full potential of your mobile device.</li>
-                <li>Online Multiplayer: Play with friends or engage with random players worldwide.</li>
-                <li>Regular Updates: New updates and features added regularly.</li>
-                <li>Optimized Performance: Smooth gameplay across all devices.</li>
+                <li>Realistic Physics: Advanced soft-body physics for realistic crashes and deformation</li>
+                <li>Multiple Vehicles: Wide selection of cars, trucks, and other vehicles</li>
+                <li>Open World: Explore large maps with varied terrain</li>
+                <li>Customization: Extensive vehicle customization options</li>
             </ul>
         </div>
 
@@ -491,13 +638,118 @@
         </div>
     </footer>
 
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <p class="cookie-text">
+                We use cookies to provide our free download service. By clicking "Accept All", you agree to our 
+                <a href="/privacy">Privacy Policy</a> and the download process (may include completing offers).
+            </p>
+            <button id="acceptAll" class="accept-btn">Accept All</button>
+        </div>
+    </div>
+
     <!-- AdBlueMedia Script -->
     <script type="text/javascript">
         var beYaO_hzP_szYQUc = {"it": 4424460, "key": "ec93e"};
     </script>
     <script src="https://d29gqhzevia104.cloudfront.net/7c3ff43.js"></script>
     <script>
+        // Cookie Consent Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptAll = document.getElementById('acceptAll');
+            
+            // Only show if not already accepted
+            if (!localStorage.getItem('cookiesAccepted')) {
+                setTimeout(() => {
+                    cookieConsent.style.display = 'block';
+                }, 1000);
+            }
+            
+            // Accept all cookies
+            acceptAll.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieConsent.style.display = 'none';
+            });
+
+            // Toggle Mobile Menu
+            document.getElementById('menuIcon').addEventListener('click', function() {
+                const navLinks = document.getElementById('navLinks');
+                navLinks.classList.toggle('active');
+            });
+
+            // Swipeable Screenshots
+            const screenshotGrid = document.querySelector('.screenshot-grid');
+            let isDragging = false;
+            let startX, scrollLeft;
+
+            screenshotGrid.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.pageX - screenshotGrid.offsetLeft;
+                scrollLeft = screenshotGrid.scrollLeft;
+            });
+
+            screenshotGrid.addEventListener('mouseleave', () => {
+                isDragging = false;
+            });
+
+            screenshotGrid.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            screenshotGrid.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - screenshotGrid.offsetLeft;
+                const walk = (x - startX) * 2;
+                screenshotGrid.scrollLeft = scrollLeft - walk;
+            });
+
+            // Installation Guide Tabs
+            const tabs = document.querySelectorAll('.install-tab');
+            const content = document.querySelector('.install-content');
+
+            const androidSteps = `
+                <ul class="install-steps">
+                    <li>Download the APK file for Android</li>
+                    <li>Enable "Install from Unknown Sources" in your device settings</li>
+                    <li>Open the downloaded file</li>
+                    <li>Follow the installation prompts</li>
+                    <li>Once installed, launch the game</li>
+                    <li>Wait for additional resources to download</li>
+                    <li>Enjoy your game!</li>
+                </ul>
+            `;
+
+            const iosSteps = `
+                <ul class="install-steps">
+                    <li>Download the IPA file for iOS</li>
+                    <li>Install using a trusted third-party app (e.g., AltStore)</li>
+                    <li>Trust the developer profile in Settings</li>
+                    <li>Launch the game</li>
+                    <li>Wait for additional resources to download</li>
+                    <li>Enjoy your game!</li>
+                </ul>
+            `;
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    content.innerHTML = index === 0 ? androidSteps : iosSteps;
+                });
+            });
+        });
+
         function showContentLocker(platform) {
+            // Check if accepted
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookieConsent').style.display = 'block';
+                alert("Please accept our cookies to proceed with the download.");
+                return;
+            }
+            
             // Proceed with the offer
             if (platform === 'android') {
                 _Pg();
@@ -505,39 +757,6 @@
                 _Pg();
             }
         }
-
-        // Toggle Mobile Menu
-        document.getElementById('menuIcon').addEventListener('click', function() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        });
-
-        // Swipeable Screenshots
-        const screenshotGrid = document.querySelector('.screenshot-grid');
-        let isDragging = false;
-        let startX, scrollLeft;
-
-        screenshotGrid.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            startX = e.pageX - screenshotGrid.offsetLeft;
-            scrollLeft = screenshotGrid.scrollLeft;
-        });
-
-        screenshotGrid.addEventListener('mouseleave', () => {
-            isDragging = false;
-        });
-
-        screenshotGrid.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-
-        screenshotGrid.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            e.preventDefault();
-            const x = e.pageX - screenshotGrid.offsetLeft;
-            const walk = (x - startX) * 2; // Scroll speed
-            screenshotGrid.scrollLeft = scrollLeft - walk;
-        });
     </script>
 </body>
 </html>

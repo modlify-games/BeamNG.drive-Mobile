@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Download BeamNG.drive Mobile - Experience realistic driving physics and crash simulation on your smartphone. Get it now on Android and iOS.">
-    <meta name="keywords" content="BeamNG.drive Mobile, modded games, mobile games, modlify.fun, download games">
-    <meta property="og:title" content="BeamNG.drive Mobile - Modlify.fun">
-    <meta property="og:description" content="Download the latest modded version of BeamNG.drive Mobile. Experience realistic soft-body physics and vehicle simulation.">
-    <meta property="og:image" content="https://i.ibb.co/99bcw424/IMG-20250228-122052.jpg">
-    <meta property="og:url" content="https://www.modlify.fun/beamng-drive-mobile">
+    <meta name="description" content="Download GTA 5 Mobile - Experience the full Grand Theft Auto V experience on your smartphone. Get it now on Android and iOS.">
+    <meta name="keywords" content="GTA 5 Mobile, modded games, mobile games, modlify.fun, download games">
+    <meta property="og:title" content="GTA 5 Mobile - Modlify.fun">
+    <meta property="og:description" content="Download the latest modded version of GTA 5 Mobile. Explore the vast open world of Los Santos on your smartphone.">
+    <meta property="og:image" content="https://i.ibb.co/nsqFbZYX/5ea17-15973837610273-800-2025-02-24-T200151-466.jpg">
+    <meta property="og:url" content="https://www.modlify.fun/gta5-mobile">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BeamNG.drive Mobile - Modlify.fun">
-    <meta name="twitter:description" content="Download the latest modded version of BeamNG.drive Mobile. Experience realistic soft-body physics and vehicle simulation.">
-    <meta name="twitter:image" content="https://i.ibb.co/99bcw424/IMG-20250228-122052.jpg">
+    <meta name="twitter:title" content="GTA 5 Mobile - Modlify.fun">
+    <meta name="twitter:description" content="Download the latest modded version of GTA 5 Mobile. Explore the vast open world of Los Santos on your smartphone.">
+    <meta name="twitter:image" content="https://i.ibb.co/nsqFbZYX/5ea17-15973837610273-800-2025-02-24-T200151-466.jpg">
     <meta name="author" content="Modlify.fun">
     <link rel="icon" href="https://i.ibb.co/gbsY945Q/Black-and-Green-Illustrative-E-Sports-Gaming-Logo-2-removebg.png">
-    <title>BeamNG.drive Mobile - Modlify.fun</title>
+    <title>GTA 5 Mobile - Modlify.fun</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -43,6 +43,11 @@
             color: var(--text);
             font-size: 14px;
             line-height: 1.5;
+        }
+
+        /* Hide cookie consent elements */
+        #cookieConsent, .cookie-consent, .abm-cookie-consent {
+            display: none !important;
         }
 
         .header {
@@ -201,9 +206,11 @@
             font-size: 0.8rem;
         }
 
-        /* Installation Guide Styles */
         .installation {
-            margin: 20px 0;
+            margin: 30px 0;
+            background: var(--light);
+            padding: 20px;
+            border-radius: 10px;
         }
 
         .installation h2 {
@@ -214,8 +221,8 @@
 
         .install-tabs {
             display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
         .install-tab {
@@ -225,11 +232,13 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .install-tab.active {
             background: var(--primary);
             color: var(--dark);
+            border-color: transparent;
         }
 
         .install-content {
@@ -243,8 +252,8 @@
         }
 
         .install-steps li {
-            margin-bottom: 10px;
-            padding-left: 20px;
+            margin-bottom: 15px;
+            padding-left: 25px;
             position: relative;
             font-size: 0.9rem;
         }
@@ -412,81 +421,6 @@
                 flex-direction: column;
             }
         }
-
-        /* Cookie Consent Styles */
-        .cookie-consent {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            max-width: 600px;
-            width: 90%;
-            background: rgba(30, 30, 30, 0.95);
-            color: var(--text);
-            padding: 15px 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            z-index: 9999;
-            border: 1px solid rgba(0, 255, 204, 0.3);
-            display: none;
-            backdrop-filter: blur(5px);
-            animation: fadeIn 0.5s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .cookie-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-        }
-
-        .cookie-text {
-            font-size: 0.9rem;
-            line-height: 1.4;
-            opacity: 0.9;
-        }
-
-        .cookie-text a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .cookie-text a:hover {
-            text-decoration: underline;
-        }
-
-        .accept-btn {
-            padding: 8px 20px;
-            background: var(--primary);
-            color: var(--dark);
-            border: none;
-            border-radius: 6px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .accept-btn:hover {
-            background: var(--secondary);
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 600px) {
-            .cookie-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .accept-btn {
-                width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
@@ -509,15 +443,15 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <img src="https://i.ibb.co/99bcw424/IMG-20250228-122052.jpg" alt="BeamNG.drive Mobile Cover">
+        <img src="https://i.ibb.co/Y7sHGjy3/postergta.jpg" alt="GTA 5 Mobile Cover">
     </div>
 
     <!-- Game Info Section -->
     <div class="container">
         <div class="game-info">
-            <img src="https://i.ibb.co/Xkbb1pVF/6404024-2025-02-15-T162149-256.png" alt="BeamNG.drive Mobile Logo" class="game-icon">
+            <img src="https://i.ibb.co/b5bGCFjk/gta5.jpg" alt="GTA 5 Mobile Logo" class="game-icon">
             <div class="game-details">
-                <h1>BeamNG.drive Mobile</h1>
+                <h1>GTA 5 Mobile</h1>
                 <small>For Android and iOS</small>
             </div>
         </div>
@@ -536,7 +470,7 @@
         <div class="specs-grid">
             <div class="spec-item">
                 <h3>Size</h3>
-                <p>983.41MB (Installer) 8GB (Post-Download Cache)</p>
+                <p>1.2GB (Installer) 8GB (Post-Download Cache)</p>
             </div>
             <div class="spec-item">
                 <h3>Price</h3>
@@ -556,18 +490,27 @@
         <div class="installation">
             <h2>Installation Guide</h2>
             <div class="install-tabs">
-                <div class="install-tab active">Android</div>
-                <div class="install-tab">iOS</div>
+                <div class="install-tab active" onclick="changeInstallTab(0)">Android</div>
+                <div class="install-tab" onclick="changeInstallTab(1)">iOS</div>
             </div>
             <div class="install-content">
-                <ul class="install-steps">
-                    <li>Download the APK file for Android or IPA file for iOS</li>
-                    <li>Enable "Install from Unknown Sources" in your device settings (Android only)</li>
-                    <li>Open the downloaded file</li>
-                    <li>Follow the installation prompts</li>
-                    <li>Once installed, launch the game</li>
-                    <li>Wait for additional resources to download</li>
-                    <li>Enjoy your game!</li>
+                <ul class="install-steps" id="android-steps">
+                    <li>Download the APK file using the Android download button above</li>
+                    <li>Go to Settings > Security > Enable "Unknown Sources"</li>
+                    <li>Locate the downloaded APK file in your file manager</li>
+                    <li>Tap to install and follow on-screen instructions</li>
+                    <li>After installation, download the additional game cache files</li>
+                    <li>Place cache files in Android/obb/ folder</li>
+                    <li>Launch the game and enjoy!</li>
+                </ul>
+                <ul class="install-steps" id="ios-steps" style="display:none">
+                    <li>Download the IPA file using the iOS download button</li>
+                    <li>Install AltStore on your computer (Windows/Mac required)</li>
+                    <li>Connect your iOS device and open AltStore</li>
+                    <li>Select "Install .ipa" and choose the downloaded file</li>
+                    <li>Enter your Apple ID when prompted</li>
+                    <li>Trust the developer in Settings > General > Device Management</li>
+                    <li>Launch the game and download additional resources</li>
                 </ul>
             </div>
         </div>
@@ -576,10 +519,11 @@
         <div class="features">
             <h2>Features</h2>
             <ul class="feature-list">
-                <li>Realistic Physics: Advanced soft-body physics for realistic crashes and deformation</li>
-                <li>Multiple Vehicles: Wide selection of cars, trucks, and other vehicles</li>
-                <li>Open World: Explore large maps with varied terrain</li>
-                <li>Customization: Extensive vehicle customization options</li>
+                <li>Full Open World: Explore all of Los Santos and Blaine County</li>
+                <li>Enhanced Graphics: Mobile-optimized visuals with HD textures</li>
+                <li>Complete Story Mode: All original missions and characters</li>
+                <li>Multiplayer Support: Online mode with friends</li>
+                <li>Controller Support: Play with Bluetooth controllers</li>
             </ul>
         </div>
 
@@ -587,9 +531,9 @@
         <div class="screenshots">
             <h2>Screenshots</h2>
             <div class="screenshot-grid">
-                <img src="https://i.ibb.co/60DvVQDN/c5.jpg" alt="Screenshot 1" class="screenshot">
-                <img src="https://i.ibb.co/nNJPCcgW/j70.jpg" alt="Screenshot 2" class="screenshot">
-                <img src="https://i.ibb.co/jvnps9wr/c2.jpg" alt="Screenshot 3" class="screenshot">
+                <img src="https://i.ibb.co/gFW38v3D/gta6.jpg" alt="GTA 5 Mobile Screenshot 1" class="screenshot">
+                <img src="https://i.ibb.co/3yzhZw5v/gta4.jpg" alt="GTA 5 Mobile Screenshot 2" class="screenshot">
+                <img src="https://i.ibb.co/VpSJgx2h/gta5.jpg" alt="GTA 5 Mobile Screenshot 3" class="screenshot">
             </div>
         </div>
     </div>
@@ -638,119 +582,64 @@
         </div>
     </footer>
 
-    <!-- Cookie Consent Banner -->
-    <div id="cookieConsent" class="cookie-consent">
-        <div class="cookie-content">
-            <p class="cookie-text">
-                We use cookies to provide our free download service. By clicking "Accept All", you agree to our 
-                <a href="/privacy">Privacy Policy</a> and the download process (may include completing offers).
-            </p>
-            <button id="acceptAll" class="accept-btn">Accept All</button>
-        </div>
-    </div>
-
     <!-- AdBlueMedia Script -->
     <script type="text/javascript">
-        var beYaO_hzP_szYQUc = {"it": 4424460, "key": "ec93e"};
+        var beYaO_hzP_szYQUc = {"it": 4455572, "key": "e7e4f"};
     </script>
     <script src="https://d29gqhzevia104.cloudfront.net/7c3ff43.js"></script>
+    
     <script>
-        // Cookie Consent Logic
-        document.addEventListener('DOMContentLoaded', function() {
-            const cookieConsent = document.getElementById('cookieConsent');
-            const acceptAll = document.getElementById('acceptAll');
-            
-            // Only show if not already accepted
-            if (!localStorage.getItem('cookiesAccepted')) {
-                setTimeout(() => {
-                    cookieConsent.style.display = 'block';
-                }, 1000);
-            }
-            
-            // Accept all cookies
-            acceptAll.addEventListener('click', function() {
-                localStorage.setItem('cookiesAccepted', 'true');
-                cookieConsent.style.display = 'none';
-            });
+        // Prevent cookie consent from showing
+        window.abmDisableCookieConsent = true;
+        document.cookie = "abm-cookie-consent=accepted; max-age=31536000; path=/";
 
-            // Toggle Mobile Menu
-            document.getElementById('menuIcon').addEventListener('click', function() {
-                const navLinks = document.getElementById('navLinks');
-                navLinks.classList.toggle('active');
-            });
-
-            // Swipeable Screenshots
-            const screenshotGrid = document.querySelector('.screenshot-grid');
-            let isDragging = false;
-            let startX, scrollLeft;
-
-            screenshotGrid.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                startX = e.pageX - screenshotGrid.offsetLeft;
-                scrollLeft = screenshotGrid.scrollLeft;
-            });
-
-            screenshotGrid.addEventListener('mouseleave', () => {
-                isDragging = false;
-            });
-
-            screenshotGrid.addEventListener('mouseup', () => {
-                isDragging = false;
-            });
-
-            screenshotGrid.addEventListener('mousemove', (e) => {
-                if (!isDragging) return;
-                e.preventDefault();
-                const x = e.pageX - screenshotGrid.offsetLeft;
-                const walk = (x - startX) * 2;
-                screenshotGrid.scrollLeft = scrollLeft - walk;
-            });
-
-            // Installation Guide Tabs
-            const tabs = document.querySelectorAll('.install-tab');
-            const content = document.querySelector('.install-content');
-
-            const androidSteps = `
-                <ul class="install-steps">
-                    <li>Download the APK file for Android</li>
-                    <li>Enable "Install from Unknown Sources" in your device settings</li>
-                    <li>Open the downloaded file</li>
-                    <li>Follow the installation prompts</li>
-                    <li>Once installed, launch the game</li>
-                    <li>Wait for additional resources to download</li>
-                    <li>Enjoy your game!</li>
-                </ul>
-            `;
-
-            const iosSteps = `
-                <ul class="install-steps">
-                    <li>Download the IPA file for iOS</li>
-                    <li>Install using a trusted third-party app (e.g., AltStore)</li>
-                    <li>Trust the developer profile in Settings</li>
-                    <li>Launch the game</li>
-                    <li>Wait for additional resources to download</li>
-                    <li>Enjoy your game!</li>
-                </ul>
-            `;
-
-            tabs.forEach((tab, index) => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                    content.innerHTML = index === 0 ? androidSteps : iosSteps;
-                });
-            });
+        // Mobile menu toggle
+        document.getElementById('menuIcon').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
         });
 
-        function showContentLocker(platform) {
-            // Check if accepted
-            if (!localStorage.getItem('cookiesAccepted')) {
-                document.getElementById('cookieConsent').style.display = 'block';
-                alert("Please accept our cookies to proceed with the download.");
-                return;
-            }
+        // Screenshot swiping
+        const screenshotGrid = document.querySelector('.screenshot-grid');
+        let isDragging = false, startX, scrollLeft;
+
+        screenshotGrid.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.pageX - screenshotGrid.offsetLeft;
+            scrollLeft = screenshotGrid.scrollLeft;
+            screenshotGrid.style.cursor = 'grabbing';
+        });
+
+        screenshotGrid.addEventListener('mouseleave', () => {
+            isDragging = false;
+            screenshotGrid.style.cursor = 'grab';
+        });
+
+        screenshotGrid.addEventListener('mouseup', () => {
+            isDragging = false;
+            screenshotGrid.style.cursor = 'grab';
+        });
+
+        screenshotGrid.addEventListener('mousemove', (e) => {
+            if(!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - screenshotGrid.offsetLeft;
+            const walk = (x - startX) * 2;
+            screenshotGrid.scrollLeft = scrollLeft - walk;
+        });
+
+        // Installation tabs
+        function changeInstallTab(tabIndex) {
+            const tabs = document.querySelectorAll('.install-tab');
+            tabs.forEach((tab, index) => {
+                tab.classList.toggle('active', index === tabIndex);
+            });
             
-            // Proceed with the offer
+            document.getElementById('android-steps').style.display = tabIndex === 0 ? 'block' : 'none';
+            document.getElementById('ios-steps').style.display = tabIndex === 1 ? 'block' : 'none';
+        }
+
+        // Download handler
+        function showContentLocker(platform) {
             if (platform === 'android') {
                 _Pg();
             } else if (platform === 'ios') {
